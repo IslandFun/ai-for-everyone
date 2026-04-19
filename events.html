@@ -93,7 +93,7 @@
 <body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/80 backdrop-blur-2xl bg-gradient-to-b from-zinc-900/50 to-transparent shadow-[0_20px_40px_rgba(0,251,251,0.05)]">
-<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 md:py-6 max-w-[1920px] mx-auto">
 <div class="flex items-center gap-3">
 <img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" src="assets/logo.png"/>
 <div class="text-2xl font-bold tracking-tighter text-fuchsia-500 dark:text-fuchsia-400 font-headline">
@@ -109,14 +109,19 @@
 <a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="workshopregistration.html">Workshops</a>
 </div>
 </div>
+<div class="md:hidden px-4 pb-4 overflow-x-auto">
+<div class="flex items-center gap-4 text-xs uppercase whitespace-nowrap text-zinc-300 font-semibold">
+<a href="index.html">Home</a><a href="guideslibrary.html">Guides</a><a href="guidesmastering.html">Mastering</a><a href="study.html">Study</a><a href="events.html">Events</a><a href="workshopregistration.html">Workshops</a>
+</div>
+</div>
 </nav>
-<main class="pt-32 pb-20 px-12 max-w-[1920px] mx-auto">
+<main class="pt-32 pb-20 px-4 md:px-12 max-w-[1920px] mx-auto">
 <!-- Hero Header -->
 <header class="mb-16">
-<h1 class="text-7xl font-bold tracking-tighter mb-4 leading-none">Nexus <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">Calendar</span></h1>
+<h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-4 leading-none">Nexus <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">Calendar</span></h1>
 <p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">Shape the future of intelligence. Browse upcoming workshops, hackathons, and technical deep-dives hosted by the AI For Everyone community.</p>
 </header>
-<div class="grid grid-cols-12 gap-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 <!-- Left Column: Interactive Calendar & Filters -->
 <aside class="col-span-12 lg:col-span-4 space-y-12">
 <!-- Calendar Module -->
@@ -308,7 +313,7 @@
 </div>
 </main>
 <!-- Footer Component -->
-<footer class="w-full py-20 px-12 bg-black border-t border-zinc-900 font-inter text-sm tracking-wide uppercase">
+<footer class="w-full py-20 px-4 md:px-12 bg-black border-t border-zinc-900 font-inter text-sm tracking-wide uppercase">
 <div class="flex flex-col md:flex-row justify-between items-center max-w-[1920px] mx-auto gap-12">
 <div class="text-lg font-black text-fuchsia-500">
                 AI For Everyone

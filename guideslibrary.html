@@ -99,7 +99,7 @@
 <body class="bg-surface text-on-surface selection:bg-primary/30">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-2xl shadow-[0_20px_40px_rgba(191,64,191,0.05)] transition-colors duration-300">
-<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<div class="flex justify-between items-center px-4 md:px-12 py-4 md:py-6 w-full max-w-screen-2xl mx-auto font-['Space_Grotesk'] tracking-tight">
 <div class="flex items-center gap-3">
 <img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" src="assets/logo.png"/>
 <div class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk']">
@@ -114,17 +114,22 @@
 <a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="events.html">Events</a>
 <a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="workshopregistration.html">Workshops</a>
 </div>
+<div class="md:hidden px-4 pb-4 overflow-x-auto">
+<div class="flex items-center gap-4 text-xs uppercase whitespace-nowrap text-gray-300 font-semibold">
+<a href="index.html">Home</a><a href="guideslibrary.html">Guides</a><a href="guidesmastering.html">Mastering</a><a href="study.html">Study</a><a href="events.html">Events</a><a href="workshopregistration.html">Workshops</a>
+</div>
+</div>
 </div>
 </nav>
 <main class="pt-32 pb-24 min-h-screen hero-gradient overflow-hidden">
 <!-- Hero Section -->
-<section class="max-w-screen-2xl mx-auto px-12 mb-20 relative">
+<section class="max-w-screen-2xl mx-auto px-4 md:px-12 mb-20 relative">
 <div class="flex flex-col md:flex-row items-end justify-between gap-12">
 <div class="flex-1">
 <span class="inline-block mb-6 px-4 py-1.5 rounded-full bg-surface-container-high text-primary text-xs font-bold tracking-[0.2em] uppercase">
                         Knowledge Archive
                     </span>
-<h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8">
+<h1 class="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8">
                         MASTERING<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">INTELLIGENCE</span>
 </h1>
 <p class="max-w-xl text-on-surface-variant text-lg leading-relaxed font-light">
@@ -138,7 +143,7 @@
 </div>
 </section>
 <!-- Filter & Search Section -->
-<section class="max-w-screen-2xl mx-auto px-12 mb-16">
+<section class="max-w-screen-2xl mx-auto px-4 md:px-12 mb-16">
 <div class="bg-surface-container-low p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center">
 <div class="flex-1 relative w-full">
 <span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
@@ -156,7 +161,7 @@
 </div>
 </section>
 <!-- Guides Grid -->
-<section class="max-w-screen-2xl mx-auto px-12">
+<section class="max-w-screen-2xl mx-auto px-4 md:px-12">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Card 1 -->
 <div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
