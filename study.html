@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#ffffff",
+                    "surface-bright": "#2c2c2c",
+                    "primary-container": "#f06cec",
+                    "on-primary-container": "#440046",
+                    "on-tertiary-fixed": "#001836",
+                    "tertiary-fixed": "#81b2ff",
+                    "outline": "#767575",
+                    "on-primary-fixed": "#250026",
+                    "tertiary-container": "#60a1ff",
+                    "on-tertiary-fixed-variant": "#003971",
+                    "on-secondary-container": "#d9fffe",
+                    "surface-container-lowest": "#000000",
+                    "surface-variant": "#262626",
+                    "on-tertiary-container": "#002249",
+                    "surface": "#0e0e0e",
+                    "on-error": "#490013",
+                    "secondary-container": "#006a6a",
+                    "error": "#ff6e84",
+                    "error-dim": "#d73357",
+                    "on-surface-variant": "#adaaaa",
+                    "inverse-surface": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#006666",
+                    "surface-container-low": "#131313",
+                    "surface-container": "#1a1a1a",
+                    "surface-dim": "#0e0e0e",
+                    "secondary-fixed": "#00fbfb",
+                    "inverse-primary": "#a221a4",
+                    "secondary-fixed-dim": "#00ecec",
+                    "primary": "#ff7afb",
+                    "on-tertiary": "#002e5e",
+                    "on-error-container": "#ffb2b9",
+                    "surface-container-high": "#20201f",
+                    "on-primary-fixed-variant": "#620065",
+                    "on-primary": "#57005a",
+                    "secondary-dim": "#00ecec",
+                    "error-container": "#a70138",
+                    "background": "#0e0e0e",
+                    "tertiary-fixed-dim": "#66a4ff",
+                    "primary-fixed-dim": "#ed6ae9",
+                    "outline-variant": "#484847",
+                    "on-secondary-fixed": "#004747",
+                    "inverse-on-surface": "#565555",
+                    "surface-container-highest": "#262626",
+                    "surface-tint": "#ff7afb",
+                    "on-secondary": "#005c5c",
+                    "secondary": "#00fbfb",
+                    "on-surface": "#ffffff",
+                    "primary-dim": "#ed6ae9",
+                    "tertiary": "#7cafff",
+                    "tertiary-dim": "#5d9ffc",
+                    "primary-fixed": "#fc77f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="sticky top-4 mx-auto max-w-7xl z-50 px-8 py-4 bg-[#0e0e0e]/80 backdrop-blur-2xl rounded-full flex justify-between items-center w-full shadow-[0_20px_40px_rgba(191,64,191,0.1)]">
+<div class="flex items-center gap-3">
+<img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" src="assets/logo.png"/>
+<div class="text-2xl font-black text-white tracking-tighter">AI For Everyone</div>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] font-bold tracking-tight">
+<a class="text-zinc-400 hover:text-white transition-all hover:bg-zinc-800/50 rounded-full px-4 py-2 active:scale-95 duration-200" href="index.html">Home</a>
+<a class="text-zinc-400 hover:text-white transition-all hover:bg-zinc-800/50 rounded-full px-4 py-2 active:scale-95 duration-200" href="guideslibrary.html">Guides</a>
+<a class="text-zinc-400 hover:text-white transition-all hover:bg-zinc-800/50 rounded-full px-4 py-2 active:scale-95 duration-200" href="guidesmastering.html">Mastering</a>
+<a class="text-[#BF40BF] border-b-2 border-[#BF40BF] pb-1 hover:bg-zinc-800/50 rounded-full px-4 py-2 transition-all active:scale-95 duration-200" href="study.html">Study</a>
+<a class="text-zinc-400 hover:text-white transition-all hover:bg-zinc-800/50 rounded-full px-4 py-2 active:scale-95 duration-200" href="events.html">Events</a>
+<a class="text-zinc-400 hover:text-white transition-all hover:bg-zinc-800/50 rounded-full px-4 py-2 active:scale-95 duration-200" href="workshopregistration.html">Workshops</a>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-8 mt-24 mb-32">
+<!-- Hero Section -->
+<header class="relative mb-24 overflow-hidden rounded-xl p-16 flex flex-col md:flex-row items-center gap-12 bg-surface-container-low">
+<div class="flex-1 z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary/10 text-primary mb-6 border border-primary/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-widest">Enhanced Intelligence</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white mb-8">
+                    Study Tips for the <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">AI Era</span>
+</h1>
+<p class="text-on-surface-variant text-xl max-w-xl leading-relaxed font-light">
+                    Transform your academic performance by integrating generative intelligence. Move beyond memorization into the realm of synthesized, high-velocity learning.
+                </p>
+</div>
+<div class="flex-1 w-full relative">
+<div class="aspect-square rounded-xl overflow-hidden shadow-2xl relative group">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 scale-110" data-alt="Abstract 3D visualization of neon glowing neural network nodes connecting in a dark digital space with purple and cyan light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxF8xCwBbBWgxqPMIWOE14d2Y6mhmHvOd9Rs3exw0iLN17NagdyY0hOp85TohCiegvhDTpK0-Oq6R2lPxBBoar1srpMJq8ia9m65pKfc9DzTmLXIS50DlZF2UFJt2_fWLJxMNSYP0jSp2ksaS9x-at9oEp0F044EWp7XTJCwxXNb_GwaozgMw5kA_yKFa6h7njMNDnSu8zgbZLxeiX1BFBej_PsLrghhfZGGLPnNICD-Bpb1ynxNWPyOeLUA93EhZSR3kJT88grOQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+</div>
+</div>
+</header>
+<!-- Bento Grid Tips -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- The Prompt Revolution -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-12 relative overflow-hidden group hover:bg-surface-container-high transition-all duration-500">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">bolt</span>
+<h2 class="text-4xl font-bold text-white mb-4">The Prompt Revolution</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-2xl">
+                        AI is a conversation, not a search engine. Master the art of structured input to extract high-fidelity knowledge and complex problem-solving strategies from Large Language Models.
+                    </p>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(0,251,251,0.3)] transition-all">
+                        View Guidelines
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/5 rounded-full blur-[100px] group-hover:bg-secondary/10 transition-all"></div>
+</div>
+<!-- Workflow Velocity -->
+<div class="md:col-span-4 bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-xl p-12 border border-outline-variant/10">
+<div class="flex flex-col h-full justify-between">
+<div>
+<h3 class="text-2xl font-bold text-white mb-4">Workflow Velocity</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Automate the mundane. Learn to use AI for scheduling, summarizing lecture transcripts, and generating flashcards in seconds.
+                        </p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-highest">
+<span class="text-xs font-medium uppercase tracking-wider opacity-60">Transcription</span>
+<span class="text-secondary text-xs font-bold">+400% Speed</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-highest">
+<span class="text-xs font-medium uppercase tracking-wider opacity-60">Synthesis</span>
+<span class="text-primary text-xs font-bold">+250% Growth</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mastering Prompting -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-12 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">psychology</span>
+<h3 class="text-2xl font-bold text-white mb-4">Mastering Prompting</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                    Iterative refining and chain-of-thought techniques to debug complex engineering problems and philosophical inquiries.
+                </p>
+</div>
+<!-- Advanced Research -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-12 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4">analytics</span>
+<h3 class="text-2xl font-bold text-white mb-4">Advanced Research</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                    Leverage AI to traverse academic papers, map cross-disciplinary connections, and identify knowledge gaps in current literature.
+                </p>
+</div>
+<!-- Synthesized Learning -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-12 hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">hub</span>
+<h3 class="text-2xl font-bold text-white mb-4">Synthesized Learning</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                    Create personalized learning paths that adapt to your pace. Transform dense textbooks into interactive Socratic dialogues.
+                </p>
+</div>
+<!-- Verification Protocols -->
+<div class="md:col-span-12 bg-surface-container-low rounded-xl p-12 flex flex-col md:flex-row items-center gap-12 mt-6">
+<div class="flex-1">
+<div class="inline-block px-3 py-1 rounded bg-error-container/20 text-error text-[10px] font-bold uppercase tracking-widest mb-4">Critical Component</div>
+<h2 class="text-4xl font-bold text-white mb-6">Verification Protocols</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                        AI is not infallible. Learn the "Human-in-the-loop" framework to fact-check hallucinations, verify mathematical proofs, and ensure academic integrity.
+                    </p>
+</div>
+<div class="flex-none grid grid-cols-2 gap-4">
+<div class="w-40 h-40 rounded-lg bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant/10 text-center p-4">
+<span class="material-symbols-outlined text-error mb-2">fact_check</span>
+<span class="text-xs font-bold">Cross-Ref <br/>Logic</span>
+</div>
+<div class="w-40 h-40 rounded-lg bg-surface-container-highest flex flex-col items-center justify-center border border-outline-variant/10 text-center p-4">
+<span class="material-symbols-outlined text-primary mb-2">history_edu</span>
+<span class="text-xs font-bold">Citation <br/>Audit</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 bg-[#0e0e0e] border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto px-12 gap-12">
+<div class="max-w-sm">
+<div class="text-lg font-bold text-white mb-4">AI For Everyone</div>
+<p class="font-['Inter'] text-sm leading-relaxed text-zinc-500">
+                    © 2026 AI For Everyone. Built for Human-Centric Intelligence. Empowering students to lead the next technological paradigm.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold text-white uppercase tracking-widest">Platform</span>
+<a class="text-zinc-500 hover:text-[#BF40BF] transition-colors cursor-pointer text-sm font-['Inter'] leading-relaxed" href="guidesmastering.html">Ethics Manifesto</a>
+<a class="text-zinc-500 hover:text-[#BF40BF] transition-colors cursor-pointer text-sm font-['Inter'] leading-relaxed" href="study.html">Member Directory</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold text-white uppercase tracking-widest">Support</span>
+<a class="text-zinc-500 hover:text-[#BF40BF] transition-colors cursor-pointer text-sm font-['Inter'] leading-relaxed" href="guideslibrary.html">Research</a>
+<a class="text-zinc-500 hover:text-[#BF40BF] transition-colors cursor-pointer text-sm font-['Inter'] leading-relaxed" href="index.html">Contact</a>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary/20 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-white text-lg">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-secondary/20 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-white text-lg">terminal</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

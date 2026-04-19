@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events Calendar | AI For Everyone</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#60a1ff",
+                    "surface-dim": "#0e0e0e",
+                    "primary-fixed-dim": "#ed6ae9",
+                    "tertiary-dim": "#5d9ffc",
+                    "background": "#0e0e0e",
+                    "surface-container-low": "#131313",
+                    "secondary-fixed-dim": "#00ecec",
+                    "primary-container": "#f06cec",
+                    "on-secondary": "#005c5c",
+                    "secondary-fixed": "#00fbfb",
+                    "on-tertiary-container": "#002249",
+                    "surface-bright": "#2c2c2c",
+                    "secondary-container": "#006a6a",
+                    "secondary-dim": "#00ecec",
+                    "error-container": "#a70138",
+                    "primary-dim": "#ed6ae9",
+                    "on-primary": "#57005a",
+                    "on-error": "#490013",
+                    "on-background": "#ffffff",
+                    "inverse-surface": "#fcf9f8",
+                    "outline": "#767575",
+                    "on-surface": "#ffffff",
+                    "on-primary-fixed-variant": "#620065",
+                    "on-tertiary-fixed-variant": "#003971",
+                    "surface-container": "#1a1a1a",
+                    "on-secondary-fixed": "#004747",
+                    "tertiary": "#7cafff",
+                    "outline-variant": "#484847",
+                    "on-primary-fixed": "#250026",
+                    "secondary": "#00fbfb",
+                    "surface-container-lowest": "#000000",
+                    "primary": "#ff7afb",
+                    "surface-container-highest": "#262626",
+                    "error-dim": "#d73357",
+                    "error": "#ff6e84",
+                    "on-error-container": "#ffb2b9",
+                    "inverse-on-surface": "#565555",
+                    "tertiary-fixed": "#81b2ff",
+                    "on-secondary-fixed-variant": "#006666",
+                    "surface-tint": "#ff7afb",
+                    "on-secondary-container": "#d9fffe",
+                    "inverse-primary": "#a221a4",
+                    "primary-fixed": "#fc77f8",
+                    "surface-variant": "#262626",
+                    "on-tertiary-fixed": "#001836",
+                    "on-tertiary": "#002e5e",
+                    "surface": "#0e0e0e",
+                    "tertiary-fixed-dim": "#66a4ff",
+                    "on-surface-variant": "#adaaaa",
+                    "on-primary-container": "#440046",
+                    "surface-container-high": "#20201f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; color: #ffffff; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .glass-nav { background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(24px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glow-cyan { box-shadow: 0 0 20px rgba(0, 251, 251, 0.15); }
+        .glow-fuchsia { box-shadow: 0 0 20px rgba(255, 122, 251, 0.15); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/80 backdrop-blur-2xl bg-gradient-to-b from-zinc-900/50 to-transparent shadow-[0_20px_40px_rgba(0,251,251,0.05)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-3">
+<img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" src="assets/logo.png"/>
+<div class="text-2xl font-bold tracking-tighter text-fuchsia-500 dark:text-fuchsia-400 font-headline">
+                AI For Everyone
+            </div>
+</div>
+<div class="hidden md:flex items-center space-x-10 font-space-grotesk tracking-tight">
+<a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="index.html">Home</a>
+<a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="guideslibrary.html">Guides</a>
+<a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="guidesmastering.html">Mastering</a>
+<a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="study.html">Study</a>
+<a class="text-cyan-400 dark:text-cyan-300 font-bold border-b-2 border-cyan-400 pb-1" href="events.html">Events</a>
+<a class="text-zinc-400 dark:text-zinc-500 font-medium hover:text-zinc-200 transition-all duration-300" href="workshopregistration.html">Workshops</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-12 max-w-[1920px] mx-auto">
+<!-- Hero Header -->
+<header class="mb-16">
+<h1 class="text-7xl font-bold tracking-tighter mb-4 leading-none">Nexus <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">Calendar</span></h1>
+<p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">Shape the future of intelligence. Browse upcoming workshops, hackathons, and technical deep-dives hosted by the AI For Everyone community.</p>
+</header>
+<div class="grid grid-cols-12 gap-12">
+<!-- Left Column: Interactive Calendar & Filters -->
+<aside class="col-span-12 lg:col-span-4 space-y-12">
+<!-- Calendar Module -->
+<div class="bg-surface-container-low rounded-lg p-8 glow-cyan border border-outline-variant/10">
+<div class="flex justify-between items-center mb-10">
+<h2 class="text-2xl font-bold font-headline">May 2026</h2>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container-high rounded-full text-secondary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full text-secondary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-6 text-center">
+<!-- Days of week -->
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Mo</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Tu</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">We</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Th</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Fr</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Sa</div>
+<div class="text-on-surface-variant font-bold text-xs uppercase tracking-widest pb-4">Su</div>
+<!-- Dates (May 2026, Monday-first) -->
+<div class="py-3 text-on-surface-variant/30">27</div>
+<div class="py-3 text-on-surface-variant/30">28</div>
+<div class="py-3 text-on-surface-variant/30">29</div>
+<div class="py-3 text-on-surface-variant/30">30</div>
+<div class="py-3 font-medium">01</div>
+<div class="py-3 font-medium">02</div>
+<div class="py-3 font-medium">03</div>
+<div class="relative py-3 font-bold text-secondary">
+                            08
+                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_8px_#00fbfb]"></span>
+</div>
+<div class="py-3 font-medium">09</div>
+<div class="py-3 font-medium">10</div>
+<div class="py-3 font-medium">11</div>
+<div class="py-3 font-medium">12</div>
+<div class="py-3 font-medium">13</div>
+<div class="relative py-3 font-bold text-primary">
+                            14
+                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#ff7afb]"></span>
+</div>
+<div class="py-3 font-medium">15</div>
+<div class="py-3 font-medium">16</div>
+<div class="py-3 font-medium">17</div>
+<div class="py-3 font-medium">18</div>
+<div class="py-3 font-medium">19</div>
+<div class="py-3 font-medium">20</div>
+<div class="py-3 font-medium">21</div>
+<div class="py-3 bg-secondary/10 border border-secondary/40 rounded-lg font-black text-secondary">22</div>
+<div class="py-3 font-medium">23</div>
+<div class="py-3 font-medium">24</div>
+<div class="py-3 font-medium">25</div>
+<div class="py-3 font-medium">26</div>
+<div class="py-3 font-medium">27</div>
+<div class="py-3 font-medium">28</div>
+<div class="py-3 font-medium">29</div>
+<div class="py-3 font-medium">30</div>
+<div class="py-3 font-medium">31</div>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="space-y-6">
+<h3 class="text-xl font-bold font-headline tracking-tight">Filter Categories</h3>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 rounded-full border border-secondary text-secondary font-bold hover:bg-secondary/10 transition-colors">Workshop</button>
+<button class="px-6 py-2 rounded-full border border-primary text-primary font-bold hover:bg-primary/10 transition-colors">Tech Talk</button>
+<button class="px-6 py-2 rounded-full border border-tertiary text-tertiary font-bold hover:bg-tertiary/10 transition-colors">Competition</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-bold hover:border-on-surface-variant transition-colors">Social</button>
+</div>
+</div>
+<!-- Quick Stats Bento Card -->
+<div class="bg-surface-container-high rounded-lg p-8 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-all"></div>
+<p class="text-on-surface-variant font-medium uppercase tracking-widest text-xs mb-2">Member Impact</p>
+<div class="text-4xl font-black font-headline mb-4 text-primary">12k+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Students educated through our events program across 14 global chapters this year.</p>
+</div>
+</aside>
+<!-- Right Column: Event Cards -->
+<section class="col-span-12 lg:col-span-8 space-y-10">
+<div class="flex items-end justify-between border-b border-outline-variant/20 pb-4">
+<h2 class="text-3xl font-bold font-headline">Upcoming Sessions</h2>
+<span class="text-secondary font-mono tracking-tighter">7 EVENTS FOUND</span>
+</div>
+<!-- Event Card 1 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/10 hover:border-secondary/30 transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Close-up of neural network visualization on a dark monitor with glowing neon blue and purple node connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnUQtN0iOH6V4t1FR-E7hpl4ELA9wu33YHciO-0AP0jJK_9xT5NrTDTpgVQHq5CUKupujHqBanE4cZ-5K5JtI4FWb0iD3oZgtV3OYjX1tdVzXMfLM6_Aa8NcjymQDcs7hZIHE82762XWLVgjE0S_MsDSaNw7fqu8EeKCNB-6TAmpi90TDOI8TpkILUJjpkdG1LWw6uySSnTVkOU8u6grvkalV8QGEdlo6FEk3OZlKF7bQUJ25UAMo1zjIGe1LF0nwboD3XhRc3jLQ"/>
+<div class="absolute top-6 left-6 bg-surface-container-lowest/90 backdrop-blur-xl px-4 py-3 rounded-xl border border-secondary/20 flex flex-col items-center">
+<span class="text-xs font-black text-on-surface-variant tracking-widest uppercase">MAY</span>
+<span class="text-3xl font-black text-secondary leading-none">08</span>
+</div>
+</div>
+<div class="p-10 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-[10px] font-black uppercase tracking-widest border border-secondary/20">Workshop</span>
+<span class="text-on-surface-variant text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 5:30 PM - 8:00 PM
+                                    </span>
+</div>
+<h3 class="text-3xl font-bold mb-4 font-headline group-hover:text-secondary transition-colors">Generative Adversarial Networks (GANs) Deep Dive</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Explore the architecture behind synthetic media. In this hands-on workshop, you'll train your first generator-discriminator pair to create unique digital art.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface-container-low" data-alt="portrait of a young woman smiling in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bpTdyE3V3UdENd_kh4qaD7oIrEbFllIfOXzykJqcvn4zorCS8JmEoLw9_8DC6a6x410OoeW5RRBv2-hrB0xsZERXcU9dbNM81eyAXYyQTEdPtCrEdH5cxtYW-ulqB1bMoGv8Q0w8ZP80rqkOnTpML6xhUO1-w-VbsAXoP1PuhIqE-5a-vMhoyfZ6u9lve5gYBh9fttFUF8PbzY_9AcHKK7TTxN3soMqmK5AXoE0jgZ3-KiO0O1p8EE17AbE2LwRl9mpgKrdIR-s"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface-container-low" data-alt="portrait of a confident young man in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJJpRvipsgzp9ybDIu4pbmq-tzq6kIvxKGYG-ntxXnDMha7N0oEX29TQCa21wGINJKvdtnl4RoCu0p4us4Yw3iPK2YFygDqqEb0s9sLYNf94GU57nGiijMIMCA3gxAB0Y_DggR541QNdwvn-X4f1KejqoQvuPzp5zLL6Q6Xcd3ZJDFUiBqO7CS2VCyEHmqXJokw7FqoP4KXl8cOsPpAzoH6SOMAp2ziMSOAeo0vQ2YHcG3OSl9E5cONK_bsI6eBMkNEwKzwtu6vhc"/>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface-container-low flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+42</div>
+</div>
+<button class="px-8 py-3 rounded-full bg-secondary text-on-secondary font-bold hover:bg-secondary-fixed-dim transition-colors glow-cyan active:scale-95">
+                                    Register Now
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/10 hover:border-primary/30 transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Futuristic robotic arm holding a glowing digital sphere in a dark high-tech research facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQNyfrYN7BXzUIVRTKqXsFTuXXbhBD9UCeqv2VHTSTIyorX7DQUEHRdUrYvYO677uIKf7QS64JdYFFZd5qhWaq3tjpy4IpGgiTeQoS49aIoxPlc_ReknSUutQ2vRzOEyjBVxR3ZXn7a3BJk2-2UaZDTQ1dLFJYTL-UqOpYp45r0HnI6783mQxTO1nCEgUbDL8x-NnxWTfUtP4OvJHKXP79vtUe2BcYEJ2uG6dqo_51ZXJHwbEmrYkg9U7PeFsoj7rBkTEexvm7dA"/>
+<div class="absolute top-6 left-6 bg-surface-container-lowest/90 backdrop-blur-xl px-4 py-3 rounded-xl border border-primary/20 flex flex-col items-center">
+<span class="text-xs font-black text-on-surface-variant tracking-widest uppercase">MAY</span>
+<span class="text-3xl font-black text-primary leading-none">14</span>
+</div>
+</div>
+<div class="p-10 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest border border-primary/20">Tech Talk</span>
+<span class="text-on-surface-variant text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 1:00 PM - 2:30 PM
+                                    </span>
+</div>
+<h3 class="text-3xl font-bold mb-4 font-headline group-hover:text-primary transition-colors">The Ethics of Sovereign Intelligence</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">A roundtable discussion featuring lead researchers from OpenAI and local philosophy professors on the societal impact of autonomous agents.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+<span class="text-sm text-on-surface-variant font-medium">Innovation Lab, Hall B</span>
+</div>
+<button class="px-8 py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/10 transition-colors active:scale-95">
+                                    Add to Calendar
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Event Card 3 (Competition Style) -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/10 hover:border-tertiary/30 transition-all duration-500">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 h-64 md:h-auto overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Digital circuit board glowing with matrix-like green and blue code patterns in a dark server room environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBylh9D3Js9Oazw6nOwUD44-CbbQrC3qC2Yw03Vw6QaX39NEpFXXtV0RtA-I-AcCuciQAHOuHxZaRuGAfS63ydHthx36id3v83q_sTznAp3G4qxtgE8svhkCPBDEFa8ieJ9M8GGMCQNiZKZWGAGRjgHSlVqT_9DDcbmiC11sll5LLfEzd2PsDa9mREIWuY2DAtWJnuBRvCSTl_Gcqmf_jfvfzXZxDoObZpaxXPEn1U_eaXOMl0R0DP7xJejLdv_iRxKV4FYfxEhpQ"/>
+<div class="absolute top-6 left-6 bg-surface-container-lowest/90 backdrop-blur-xl px-4 py-3 rounded-xl border border-tertiary/20 flex flex-col items-center">
+<span class="text-xs font-black text-on-surface-variant tracking-widest uppercase">MAY</span>
+<span class="text-3xl font-black text-tertiary leading-none">22</span>
+</div>
+</div>
+<div class="p-10 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="px-3 py-1 rounded-full bg-tertiary/10 text-tertiary text-[10px] font-black uppercase tracking-widest border border-tertiary/20">Competition</span>
+<span class="text-on-surface-variant text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> May 22-24 Weekend
+                                    </span>
+</div>
+<h3 class="text-3xl font-bold mb-4 font-headline group-hover:text-tertiary transition-colors">Neural-Hack: Zero to AGI</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">The ultimate test of speed and creativity. Build a functional AI agent from scratch over a single weekend and compete for $5,000 in cloud credits.</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="bg-tertiary/20 px-4 py-2 rounded-full border border-tertiary/30">
+<span class="text-[10px] font-black text-tertiary uppercase tracking-tighter">Registration Closes May 18</span>
+</div>
+<button class="px-8 py-3 rounded-full bg-tertiary text-on-tertiary font-bold hover:bg-tertiary-container transition-colors active:scale-95">
+                                    Join Teams
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-20 px-12 bg-black border-t border-zinc-900 font-inter text-sm tracking-wide uppercase">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1920px] mx-auto gap-12">
+<div class="text-lg font-black text-fuchsia-500">
+                AI For Everyone
+            </div>
+<div class="flex gap-10">
+<a class="text-zinc-600 dark:text-zinc-500 hover:text-zinc-300 transition-transform duration-200 hover:translate-x-1" href="workshopregistration.html">Privacy Policy</a>
+<a class="text-zinc-600 dark:text-zinc-500 hover:text-zinc-300 transition-transform duration-200 hover:translate-x-1" href="index.html">Contact Us</a>
+<a class="text-zinc-600 dark:text-zinc-500 hover:text-zinc-300 transition-transform duration-200 hover:translate-x-1" href="events.html">Newsletter</a>
+<a class="text-zinc-600 dark:text-zinc-500 hover:text-zinc-300 transition-transform duration-200 hover:translate-x-1" href="guideslibrary.html">Archive</a>
+</div>
+<div class="text-zinc-500 text-[10px] md:text-xs">
+                © 2026 AI For Everyone. Human-Centric Intelligence.
+            </div>
+</div>
+</footer>
+<!-- FAB (Suppressed for this screen as per rules) -->
+</body></html>

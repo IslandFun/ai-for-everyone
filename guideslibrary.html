@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#002249",
+                        "tertiary-fixed-dim": "#66a4ff",
+                        "on-primary": "#57005a",
+                        "primary-fixed-dim": "#ed6ae9",
+                        "secondary-container": "#006a6a",
+                        "on-secondary": "#005c5c",
+                        "tertiary-dim": "#5d9ffc",
+                        "inverse-surface": "#fcf9f8",
+                        "on-secondary-container": "#d9fffe",
+                        "tertiary": "#7cafff",
+                        "on-surface-variant": "#adaaaa",
+                        "error": "#ff6e84",
+                        "error-dim": "#d73357",
+                        "surface-container-high": "#20201f",
+                        "tertiary-container": "#60a1ff",
+                        "on-background": "#ffffff",
+                        "surface-container": "#1a1a1a",
+                        "inverse-on-surface": "#565555",
+                        "primary-dim": "#ed6ae9",
+                        "surface-container-highest": "#262626",
+                        "secondary-fixed": "#00fbfb",
+                        "outline": "#767575",
+                        "on-primary-fixed-variant": "#620065",
+                        "surface-variant": "#262626",
+                        "on-error-container": "#ffb2b9",
+                        "inverse-primary": "#a221a4",
+                        "tertiary-fixed": "#81b2ff",
+                        "surface-tint": "#ff7afb",
+                        "primary-container": "#f06cec",
+                        "primary-fixed": "#fc77f8",
+                        "on-error": "#490013",
+                        "on-primary-fixed": "#250026",
+                        "on-surface": "#ffffff",
+                        "primary": "#ff7afb",
+                        "background": "#0e0e0e",
+                        "secondary-fixed-dim": "#00ecec",
+                        "on-primary-container": "#440046",
+                        "error-container": "#a70138",
+                        "on-tertiary": "#002e5e",
+                        "on-secondary-fixed": "#004747",
+                        "surface-bright": "#2c2c2c",
+                        "surface": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#003971",
+                        "surface-dim": "#0e0e0e",
+                        "secondary-dim": "#00ecec",
+                        "outline-variant": "#484847",
+                        "on-tertiary-fixed": "#001836",
+                        "secondary": "#00fbfb",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-low": "#131313",
+                        "on-secondary-fixed-variant": "#006666"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 20% 50%, rgba(255, 122, 251, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(0, 251, 251, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-2xl shadow-[0_20px_40px_rgba(191,64,191,0.05)] transition-colors duration-300">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto font-['Space_Grotesk'] tracking-tight">
+<div class="flex items-center gap-3">
+<img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" src="assets/logo.png"/>
+<div class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk']">
+                AI For Everyone
+            </div>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="index.html">Home</a>
+<a class="text-[#BF40BF] font-bold border-b-2 border-[#BF40BF] pb-1" href="guideslibrary.html">Guides</a>
+<a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="guidesmastering.html">Mastering</a>
+<a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="study.html">Study</a>
+<a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="events.html">Events</a>
+<a class="text-[#adaaaa] font-medium hover:text-white transition-all duration-200" href="workshopregistration.html">Workshops</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 min-h-screen hero-gradient overflow-hidden">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-12 mb-20 relative">
+<div class="flex flex-col md:flex-row items-end justify-between gap-12">
+<div class="flex-1">
+<span class="inline-block mb-6 px-4 py-1.5 rounded-full bg-surface-container-high text-primary text-xs font-bold tracking-[0.2em] uppercase">
+                        Knowledge Archive
+                    </span>
+<h1 class="text-7xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white mb-8">
+                        MASTERING<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">INTELLIGENCE</span>
+</h1>
+<p class="max-w-xl text-on-surface-variant text-lg leading-relaxed font-light">
+                        Explore our curated library of deep-dives, technical blueprints, and ethical frameworks designed for the next generation of neural architects.
+                    </p>
+</div>
+<div class="hidden lg:block w-1/3 aspect-[4/3] bg-surface-container-low rounded-xl overflow-hidden relative group">
+<img alt="Neural abstract visualization" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Abstract 3D visualization of neural networks with glowing purple and cyan connections on a dark background with cinematic depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg0NzJiB9a8hThv0tSrL21E9pxAKZOAV6gWXQic-WpOlYITIqmDuL-iGUnBg8srqOq-rCBJ3D5VHQrUsxvtxvEdTD4KPebW48m4-Yaln9qiwLo2K-FSPRX5rNiEKZgT8uf8ewmzsxy7AppRQjAkvglmvin91-CJZx7M2rf0P3HZ5hHS2HEgcRCDAb0tT8sC-NgcfhwipLkZlxDLIPGI3QYY_2S4lJL19TGyfNfJYHCujkswEi8O_59MWOdEIjWx3RrfZfidUb_HNw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-80"></div>
+</div>
+</div>
+</section>
+<!-- Filter & Search Section -->
+<section class="max-w-screen-2xl mx-auto px-12 mb-16">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 relative w-full">
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-full py-5 pl-16 pr-8 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-secondary/50 transition-all font-body" placeholder="Search the neural repository..." type="text"/>
+</div>
+<div class="flex gap-4 items-center overflow-x-auto w-full md:w-auto no-scrollbar">
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-secondary text-on-secondary-container font-bold text-sm tracking-wide">
+                        DISCOVER
+                    </button>
+<div class="h-8 w-[1px] bg-outline-variant/30 hidden md:block"></div>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant hover:text-white hover:bg-surface-container-highest transition-all text-sm font-medium">MACHINE LEARNING</button>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant hover:text-white hover:bg-surface-container-highest transition-all text-sm font-medium">ETHICS</button>
+<button class="whitespace-nowrap px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant hover:text-white hover:bg-surface-container-highest transition-all text-sm font-medium">PROMPT ENG</button>
+</div>
+</div>
+</section>
+<!-- Guides Grid -->
+<section class="max-w-screen-2xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-video overflow-hidden relative">
+<img alt="Generative AI art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hyper-realistic close up of a digital iris with fractal patterns and glowing violet light representing generative intelligence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtgNoRjjUVYu6BpEGF4YHxrF1phVW-K924qOLbW4hgIzItIxQ78OKm6C15SANr-zkVRcTXoUCYvTPDQhXc4KHbgNSxq85uz8YriZpPZi6qyoJd3CVN2hNHAgNdry4jSiiqahx1CRsnACqHiTsd1A96IhGyQW70JS8QaIUwnXVqoTwwcGSPVDkEnNVt-oQjqBSKoFpENBT07mbqbjs2FKxsWdQ3sfO4DtG8mRZdbfsxmexfLLDeIOJO0p8TwXfFIbyTU1K3GnEXmtU"/>
+<div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-secondary">Expert</span>
+</div>
+</div>
+<div class="p-10">
+<div class="flex gap-3 mb-6">
+<span class="text-xs font-semibold text-primary uppercase tracking-widest">History</span>
+<span class="text-xs font-semibold text-outline-variant uppercase tracking-widest">•</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">12 min read</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
+                            The Genesis of Generative AI
+                        </h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-light mb-8 opacity-80">
+                            Tracing the architectural lineage from Markov chains to modern transformer models that power the world's most capable systems.
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Author" data-alt="Portrait of a young tech researcher looking directly into camera with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD12s3_3vSLtu2XQ3X0OsiKmXYoiBHbwMugis-Y8tPaCJNQQ45RkvVSEBLrMl-3rut05DKv1kGSs25bVhiLI8A_sAEQfI3EzCdJVfur9mF4s36TiBq4Uxxe2rX_MGzahHxfiq_3T5M-YyHBGDqzEejT_ZMcryhUBTHnk1rYcINiNGdMkHGg5lcuPmQFsA8nwLswFk0FxHzElgEumx4CHVUTAXqT6q9DDMEe2SVv5IF3_1WfytR46ZNOux2Ug3lU19g-TdgHkvl2ntU"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-container-highest flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">+2</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300 lg:mt-12">
+<div class="aspect-video overflow-hidden relative">
+<img alt="AI Ethics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Conceptual image of a glass human skull with internal mechanical gears and soft blue light bleed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChAdNdukHG4z2dAO0TedHifG55vKuQPPOy2PjVdj5C0QvQfzP5u88viB7i0tYi5eL2n6XzYIq0feJTJu1mF53s6nGwZA1OSsvhLIjgGeB67G0uLO1E6fTtQQvko7hrn6ZH3Xr6tQFDu_uaCByLKH8mSoZHrNunvZfOq_Hq7etlU0gfO7JNmD-5ofGsmTK9B2I3lERUG-DMiEo_umjo57m7bR2Sv2mxKMUz7ljd4sHa03AR7KO2-Gk_ALKRHbgKlUyajUI5TTEg1I0"/>
+<div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Critical</span>
+</div>
+</div>
+<div class="p-10">
+<div class="flex gap-3 mb-6">
+<span class="text-xs font-semibold text-secondary uppercase tracking-widest">Philosophy</span>
+<span class="text-xs font-semibold text-outline-variant uppercase tracking-widest">•</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">18 min read</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4 group-hover:text-secondary transition-colors leading-tight">
+                            The Ethics of Ghost in the Machine
+                        </h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-light mb-8 opacity-80">
+                            Navigating the murky waters of silicon consciousness and the moral imperatives of building autonomous decision-makers.
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Author" data-alt="Close up portrait of a woman with glasses looking thoughtful" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGAlJ-QebxgxyCd7U5_-3sfmI31pmW8J2sgPwLvwolB-l2WeBdERTjZ5ICrYRtMYsEs4Njo6KReKkA1VsqKP5bHsBWm8wp5svHD7mbect7nEuBBpDhIE6tZt5d7WB7fpUhfNPfEzNknO-X3d1-nvRl4T8C0dzY_cFKtfuTylcgFtdGt50cD8jc6aXuKPDrec3KBJbW0vdJ3B9Ya4W8fs6L-5jPT-TQXUwPIPo3bxqS8qov57XnN2cPEzg0du4UTEJUi03SmBxLQDI"/>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-video overflow-hidden relative">
+<img alt="Prompt Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vibrant abstract of glowing paint splashes and ink in water with neon purple and blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApl8I-z35-SmFDwylgbWbyHcNLFtAOBxdst8Gj8ENwshu_WhZNGPG7FJJna56u8XPK6fW1Ds8ePLDCctFMqzsZUd-fsgssfP1PnC31yryFL23aNO3tY2uLOaqBa3GjCEcVJ71U9OjlonXLU7xXTfZZtRs0x4SBFOarE0UxRqyvIS5pEGslNUqnwIQ-BwCT7RAHmLxTsIwvTnDznvTM1c7ufPD8pfvxz2zIOlTBHeJa_pOtQA0kmgl7K2I06KHohZdZo_4N0nuBz6Y"/>
+<div class="absolute top-4 right-4 bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary">Applied</span>
+</div>
+</div>
+<div class="p-10">
+<div class="flex gap-3 mb-6">
+<span class="text-xs font-semibold text-tertiary uppercase tracking-widest">Engineering</span>
+<span class="text-xs font-semibold text-outline-variant uppercase tracking-widest">•</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">8 min read</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4 group-hover:text-tertiary transition-colors leading-tight">
+                            Prompting as Art
+                        </h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-light mb-8 opacity-80">
+                            Mastering the linguistic dance required to extract peak performance and creative brilliance from Large Language Models.
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Author" data-alt="Portrait of a young man smiling with a blurred city background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBICV-dmABFaiB32hbBmRoDZzMAkJBzi3imJYzZr5-jpy6X7jCNbi_tze7CtiZGECaxkjva-Myf-uGmHSWfrk_EeUgft4UDIBK4mkFc9VYebZVwRjNBMhEdUXyU8dm0z1v1LexN97ZyDxkWrUA9YjeR16G5TG7ISsv76hfSgLdD8K7UmKlHn1LVeJfS30a_jd4zg7CR0y9ZzvYo4z_VOz_L2pLBKNgeA7u3KngfxVAJuEvYdmlel5bwA3V4apAOjreAhqu9mpNSv1w"/>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="aspect-video overflow-hidden relative">
+<img alt="Vector Database" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract 3D blocks and geometric shapes floating in a dark void with sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQBvdV5QyI1oqOf5A3RDBFwNWwpdluUlR1K7rzRT20OfGWxe-j1nvEYCdNb5KVo_SmOOq9oQXxZLcW3k4cmCjd9hh-gyfh39_BBmRvIXcJy_Xfu1s3YSTRUL__XBc8ILf-AxPY1iPCXTG0Re5ePrRU1Lv9RrTAtK-EqC5y3ApJiI9HGn9vManBEF-Bk86glxc17V34-YKbGvOXwU_npXf-GBhaLp6dXdDdhnRQAdeixAufc2fFWAKetoi8YxIqFTsx6S53rajhGFA"/>
+</div>
+<div class="p-10">
+<div class="flex gap-3 mb-6">
+<span class="text-xs font-semibold text-primary uppercase tracking-widest">Architecture</span>
+<span class="text-xs font-semibold text-outline-variant uppercase tracking-widest">•</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">15 min read</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
+                            Vector Search Fundamentals
+                        </h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-light mb-8 opacity-80">
+                            A deep dive into high-dimensional space and how vector databases are enabling the next wave of RAG-powered applications.
+                        </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-3">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-container-highest flex items-center justify-center">
+<span class="text-[10px] text-white font-bold">JD</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Card 5 (Bento Style Variation) -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300 lg:col-span-2 flex flex-col md:flex-row">
+<div class="md:w-1/2 aspect-video md:aspect-auto overflow-hidden relative">
+<img alt="Cybersecurity AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Digital circuit board pattern with green and blue energy pulses running through the connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC60WFI6nYSmyDqdRr4c4kb4iBFTzugpviCcjCFF00hdEOLUK9uY7xZKRSeSllfg7p1dPDvLkYvosFz34jBbr3YZgzy_2xE_fM-gYxYlkTDTXJpO652QgpSNe1sd99mynR_gereMlesoZmnCpDqnLyMxFOr75H0hLNEbEFTZpxJ58i7XS5adzzc_F9-ZDYvT1jt-o9LKtzdUgTwND1Ro4mauWWcAyK9PK7bQTN-V73kD8M017mFFMJSLTroeHB0YmUBAgXZX2NjK2A"/>
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<div class="flex gap-3 mb-6">
+<span class="text-xs font-semibold text-secondary uppercase tracking-widest">Security</span>
+<span class="text-xs font-semibold text-outline-variant uppercase tracking-widest">•</span>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">22 min read</span>
+</div>
+<h3 class="text-3xl font-bold text-white mb-4 group-hover:text-secondary transition-colors leading-tight">
+                            Shielding the Synapse: AI Security
+                        </h3>
+<p class="text-on-surface-variant text-sm leading-relaxed font-light mb-8 opacity-80">
+                            Understanding adversarial attacks, prompt injection, and the new frontier of protecting neural weights from sophisticated exploitation.
+                        </p>
+<div class="mt-auto">
+<button class="text-sm font-bold text-white border-b-2 border-secondary pb-1 group-hover:border-white transition-all">READ FEATURED GUIDE</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex justify-center">
+<button class="group flex items-center gap-4 bg-surface-container-high px-10 py-4 rounded-full border border-outline-variant/10 hover:border-primary/50 transition-all">
+<span class="text-sm font-bold tracking-widest">LOAD MORE COLLECTIONS</span>
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform">add</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-16 px-12 border-t border-[#484847]/15">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 w-full font-['Inter'] text-sm tracking-wide">
+<div class="text-lg font-bold text-white font-['Space_Grotesk']">
+                AI For Everyone
+            </div>
+<div class="flex gap-12 text-[#adaaaa]">
+<a class="hover:text-[#BF40BF] transition-colors opacity-80 hover:opacity-100" href="guidesmastering.html">Ethics AI</a>
+<a class="hover:text-[#BF40BF] transition-colors opacity-80 hover:opacity-100" href="guideslibrary.html">Documentation</a>
+<a class="hover:text-[#BF40BF] transition-colors opacity-80 hover:opacity-100" href="workshopregistration.html">Privacy</a>
+<a class="hover:text-[#BF40BF] transition-colors opacity-80 hover:opacity-100" href="workshopregistration.html">Terms</a>
+</div>
+<div class="text-[#adaaaa] font-medium">
+                © 2026 AI For Everyone. Human-Centric Intelligence.
+            </div>
+</div>
+</footer>
+</body></html>

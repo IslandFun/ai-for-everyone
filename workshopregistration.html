@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#002e5e",
+                        "surface-dim": "#0e0e0e",
+                        "on-surface-variant": "#adaaaa",
+                        "tertiary": "#7cafff",
+                        "primary": "#ff7afb",
+                        "on-primary-fixed": "#250026",
+                        "on-tertiary-container": "#002249",
+                        "on-primary": "#57005a",
+                        "tertiary-dim": "#5d9ffc",
+                        "primary-fixed-dim": "#ed6ae9",
+                        "on-secondary-fixed-variant": "#006666",
+                        "surface-container-low": "#131313",
+                        "on-secondary-container": "#d9fffe",
+                        "surface-container": "#1a1a1a",
+                        "on-primary-container": "#440046",
+                        "inverse-on-surface": "#565555",
+                        "outline-variant": "#484847",
+                        "on-surface": "#ffffff",
+                        "tertiary-fixed-dim": "#66a4ff",
+                        "on-tertiary-fixed-variant": "#003971",
+                        "secondary-dim": "#00ecec",
+                        "secondary": "#00fbfb",
+                        "inverse-primary": "#a221a4",
+                        "inverse-surface": "#fcf9f8",
+                        "on-background": "#ffffff",
+                        "primary-dim": "#ed6ae9",
+                        "surface-variant": "#262626",
+                        "secondary-fixed": "#00fbfb",
+                        "background": "#0e0e0e",
+                        "secondary-fixed-dim": "#00ecec",
+                        "on-primary-fixed-variant": "#620065",
+                        "error-container": "#a70138",
+                        "on-secondary-fixed": "#004747",
+                        "on-secondary": "#005c5c",
+                        "primary-fixed": "#fc77f8",
+                        "surface-bright": "#2c2c2c",
+                        "outline": "#767575",
+                        "on-tertiary-fixed": "#001836",
+                        "error": "#ff6e84",
+                        "surface": "#0e0e0e",
+                        "surface-tint": "#ff7afb",
+                        "primary-container": "#f06cec",
+                        "tertiary-fixed": "#81b2ff",
+                        "secondary-container": "#006a6a",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-container": "#60a1ff",
+                        "on-error": "#490013",
+                        "surface-container-high": "#20201f",
+                        "error-dim": "#d73357",
+                        "surface-container-highest": "#262626",
+                        "on-error-container": "#ffb2b9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto z-50 bg-neutral-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(191,64,191,0.05)] font-['Space_Grotesk'] tracking-tight text-neutral-100">
+<div class="flex items-center gap-4">
+<img alt="AI For Everyone Logo" class="h-14 w-14 rounded-lg object-contain" data-alt="abstract geometric logo with interconnected nodes glowing in neon purple and electric cyan on a dark background" src="assets/logo.png"/>
+<span class="text-2xl font-bold tracking-tighter text-fuchsia-500">AI For Everyone</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="index.html">Home</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="guideslibrary.html">Guides</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="guidesmastering.html">Mastering</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="study.html">Study</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="events.html">Events</a>
+<a class="text-fuchsia-400 border-b-2 border-fuchsia-500 pb-1" href="workshopregistration.html">Workshops</a>
+</div>
+</nav>
+<!-- Main Registration Canvas -->
+<main class="min-h-screen pt-40 pb-20 px-6 flex flex-col items-center">
+<!-- Hero Background Accent -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none opacity-50"></div>
+<div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<!-- Side Info: Asymmetric Layout -->
+<div class="lg:col-span-5 flex flex-col justify-center space-y-8">
+<div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-variant/50 border border-outline-variant/20 text-secondary mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-xs font-bold tracking-widest uppercase">Registration Open</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tighter leading-tight mb-6">
+                        Neural Networks <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">From Scratch</span>
+</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-sm">
+                        Go beyond the library imports. Understand the mathematical soul of deep learning in this intensive 4-hour build session.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 rounded-lg bg-surface-container-low border-l-4 border-primary">
+<div class="text-on-surface-variant text-xs font-bold uppercase tracking-wider mb-1">Date</div>
+<div class="font-headline text-2xl font-bold">Nov 12</div>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-low border-l-4 border-secondary">
+<div class="text-on-surface-variant text-xs font-bold uppercase tracking-wider mb-1">Availability</div>
+<div class="font-headline text-2xl font-bold">150 Spots Left</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<span class="text-sm">4:00 PM - 8:00 PM EST</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="text-sm">Main Campus, Lab 404 &amp; Virtual Stream</span>
+</div>
+</div>
+</div>
+<!-- Registration Form: Glassmorphism Card -->
+<div class="lg:col-span-7">
+<div class="glass-panel bg-surface-container-high/40 rounded-xl p-8 md:p-12 border border-outline-variant/10 shadow-2xl">
+<h2 class="font-headline text-2xl font-bold mb-8">Secure Your Seat</h2>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Full Name -->
+<div class="relative group">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 px-1">Full Name</label>
+<input class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-tertiary focus:ring-0 transition-all px-4 py-4 rounded-t-lg placeholder:text-outline text-on-surface" placeholder="Alan Turing" type="text"/>
+</div>
+<!-- University Email -->
+<div class="relative group">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 px-1">University Email</label>
+<input class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-tertiary focus:ring-0 transition-all px-4 py-4 rounded-t-lg placeholder:text-outline text-on-surface" placeholder="student@university.edu" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Major -->
+<div class="relative group">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 px-1">Major</label>
+<input class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-tertiary focus:ring-0 transition-all px-4 py-4 rounded-t-lg placeholder:text-outline text-on-surface" placeholder="Computer Science" type="text"/>
+</div>
+<!-- Knowledge Level -->
+<div class="relative group">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 px-1">Prior AI Knowledge</label>
+<select class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-tertiary focus:ring-0 transition-all px-4 py-4 rounded-t-lg text-on-surface appearance-none">
+<option>Beginner (Curious Mind)</option>
+<option>Intermediate (Knows some Python)</option>
+<option>Advanced (Has built models)</option>
+</select>
+<div class="absolute right-4 bottom-4 pointer-events-none">
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Requirements Check -->
+<div class="p-6 rounded-lg bg-surface-container-lowest/30 border border-outline-variant/10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-0.5">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Attendees should bring their own laptops with Python 3.10+ installed. Prerequisites include basic understanding of linear algebra.
+                                </p>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-5 rounded-full font-headline text-lg font-bold tracking-tight shadow-[0_10px_30px_rgba(255,122,251,0.2)] hover:shadow-[0_10px_40px_rgba(255,122,251,0.4)] active:scale-[0.98] transition-all" type="submit">
+                            Confirm Registration
+                        </button>
+<p class="text-center text-xs text-outline">
+                            By registering, you agree to our <a class="text-on-surface-variant hover:text-primary underline" href="workshopregistration.html">Workshop Participation Agreement</a>.
+                        </p>
+</form>
+</div>
+</div>
+</div>
+<!-- Secondary Content Area: Bento-esque visual cues -->
+<section class="max-w-5xl w-full mt-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-lg bg-surface-container-low flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">terminal</span>
+<h3 class="font-headline text-xl font-bold">Pure Code</h3>
+<p class="text-on-surface-variant text-sm">No libraries like PyTorch or TensorFlow. We build the backprop logic manually.</p>
+</div>
+<div class="p-8 rounded-lg bg-surface-container-low flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">groups</span>
+<h3 class="font-headline text-xl font-bold">Peer Support</h3>
+<p class="text-on-surface-variant text-sm">Mentors from the PhD track will be on-site to help with debugging.</p>
+</div>
+<div class="p-8 rounded-lg bg-surface-container-low flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">workspace_premium</span>
+<h3 class="font-headline text-xl font-bold">Certification</h3>
+<p class="text-on-surface-variant text-sm">Receive a digital badge for your portfolio upon successful completion.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 mt-24 bg-black border-t border-neutral-800/20 rounded-t-[4rem] font-['Inter'] text-sm leading-relaxed text-neutral-400">
+<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
+<div class="font-['Space_Grotesk'] font-bold text-neutral-100 text-xl">AI For Everyone</div>
+<p>© 2026 AI For Everyone. Human-Centric Intelligence.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-neutral-500 hover:text-fuchsia-300 transition-colors" href="workshopregistration.html">Privacy Policy</a>
+<a class="text-neutral-500 hover:text-fuchsia-300 transition-colors" href="workshopregistration.html">Terms of Service</a>
+<a class="text-neutral-500 hover:text-fuchsia-300 transition-colors font-semibold text-fuchsia-400" href="guidesmastering.html">AI Ethics Charter</a>
+<a class="text-neutral-500 hover:text-fuchsia-300 transition-colors" href="index.html">Contact Us</a>
+</div>
+<div class="flex gap-6 mt-8 md:mt-0">
+<span class="material-symbols-outlined opacity-80 hover:opacity-100 hover:text-secondary cursor-pointer transition-all">rss_feed</span>
+<span class="material-symbols-outlined opacity-80 hover:opacity-100 hover:text-secondary cursor-pointer transition-all">mail</span>
+<span class="material-symbols-outlined opacity-80 hover:opacity-100 hover:text-secondary cursor-pointer transition-all">share</span>
+</div>
+</footer>
+</body></html>
